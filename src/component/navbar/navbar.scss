@@ -1,0 +1,79 @@
+.navbar {
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3), 50%);
+
+  &.scrolled {
+      background-color: #0b0b0b;
+  }
+
+  .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 50px;
+      height: 70px;
+
+      .left {
+          display: flex;
+          align-items: center;
+
+          span {
+              margin-right: 20px;
+              cursor: pointer;
+          }
+
+          img {
+              height: 70px;
+              margin-right: 40px;
+          }
+      }
+
+      .right {
+          display: flex;
+          align-items: center;
+
+          .icon {
+              margin: 0 15px;
+          }
+
+          img {
+              width: 30px;
+              height: 30px;
+              border-radius: 5px;
+              object-fit: cover;
+              cursor: pointer;
+          }
+
+          .profile {
+              position: relative;
+              cursor: pointer;
+
+              .options {
+                  background-color: var(--main-color);
+                  display: none;
+                  position: absolute;
+                  top: 30px;
+                  left: -20px;
+                  border-radius: 5px;
+
+                  span {
+                      padding: 10px;
+                      cursor: pointer;
+                  }
+              }
+
+              &:hover {
+                  .options {
+                      display: flex;
+                      flex-direction: column;
+                  }
+              }
+          }
+      }
+  }
+}
